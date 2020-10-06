@@ -5,7 +5,7 @@
 
 import math
 import sys
-sys.path.insert(1,C:\Users\Maxime\Documents\GitHub\c04-ch6-exercices-Maximus4321)
+sys.path.insert(1,r"C:\Users\Maxime\Documents\GitHub\c04-ch6-exercices-Maximus4321")
 from exercice2 import frequence
 
 import turtle
