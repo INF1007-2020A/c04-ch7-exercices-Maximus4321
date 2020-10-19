@@ -14,31 +14,23 @@ def compute_volume_mass(a=2,b=4,c=2,p=10):
     mass=p*volume
     return mass,volume
 
-def arbre(repetitions):
-    color('green')
-    pensize(10)
-    left(90)
-    forward(50)
-    n=0
-    while n<=repetitions:
-        n+=1
-        pensize(10-n)
-        left(30)
-        forward(12/(n+1))
-arbre(50)
-def tree(n):
+def tree():
+  setheading(90)
   color('green')
-  if n == 1:
-    left(90)
-    forward(15)
-    left(30)
-    forward(15)
-    backward(15)
-    right(60)
-    forward(15)
-    backward(15)
+  speed(0)
+  branch()
+
+def branch(length=70, pen=7, angle=35):
+  if length > 0 and pen > 0:
+    pensize(pen)
+    forward(length)
+    right(angle)
+    branch(length-10, pen-1, angle-5)
+    left(angle*2)
+    branch(length-10, pen-1, angle-5)
+    right(angle)
+    backward(length)
 
 if __name__ == '__main__':
     # TODO: Appelez vos fonctions ici
-    arbre(50)
-    tree(1)
+    tree()
